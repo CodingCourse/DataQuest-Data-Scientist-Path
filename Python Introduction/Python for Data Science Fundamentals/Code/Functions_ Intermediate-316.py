@@ -5,7 +5,7 @@ max_value = max(a_list)
 print(max_value)
 del max
 
-## 2. Default Arguments ##
+## 3. Default Arguments ##
 
 from csv import reader
 
@@ -18,13 +18,13 @@ def open_dataset(csv_file_name = 'AppleStore.csv'):
 apps_data = open_dataset()
 print(apps_data)
 
-## 3. The Official Python Documentation ##
+## 4. The Official Python Documentation ##
 
 one_decimal = round(3.43,1)
 two_decimals = round(0.23321,2)
 five_decimals = round(921.2225227,5)
 
-## 4. Multiple Return Statements ##
+## 5. Multiple Return Statements ##
 
 def open_dataset(file_name='AppleStore.csv',header=1):
     opened_file = open(file_name)
@@ -37,7 +37,7 @@ def open_dataset(file_name='AppleStore.csv',header=1):
 
 apps_data = open_dataset()
 
-## 5. Returning Multiple Variables ##
+## 6. Returning Multiple Variables ##
 
 def open_dataset(file_name='AppleStore.csv', header=True):        
     opened_file = open(file_name)
@@ -54,7 +54,7 @@ all_data = open_dataset()
 header = all_data[0]
 apps_data = all_data[1]
 
-## 6. More About Tuples ##
+## 7. More About Tuples ##
 
 def open_dataset(file_name='AppleStore.csv', header=True):        
     opened_file = open(file_name)
@@ -69,7 +69,7 @@ def open_dataset(file_name='AppleStore.csv', header=True):
     
 header, apps_data = open_dataset()
 
-## 7. Functions — Code Running Quirks ##
+## 8. Functions — Code Running Quirks ##
 
 def print_constant():
     x = 3.14
@@ -78,7 +78,7 @@ def print_constant():
 print_constant()
 print(x)
 
-## 8. Scopes — Global and Local ##
+## 9. Scopes — Global and Local ##
 
 e = 'mathematical constant'
 a_sum = 1000
@@ -99,7 +99,7 @@ def divide():
 
 result_2 = divide()
 
-## 9. Scopes — Searching Order ##
+## 10. Scopes — Searching Order ##
 
 def open_iOS_dataset():        
     opened_file = open(file_name)
@@ -115,37 +115,3 @@ file_name = 'AppleStore.csv'
 open_iOS_dataset()
 print(header_row)
 first_five = apps_data[:5]
-
-## 10. Functions — More Quirks ##
-
-content_ratings = {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}
-
-def relative_freqs(freq_table):
-    element_sum = 0
-    for element in freq_table:
-        element_sum += freq_table[element]
-    for element in freq_table:
-        freq_table[element] = (freq_table[element] / element_sum) * 100
-    return freq_table
-
-c_ratings_percentages = relative_freqs(content_ratings)
-print(content_ratings)
-changed = True
-
-## 11. Mutable and Immutable Types ##
-
-content_ratings = {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}
-
-def relative_freqs(freq_table):
-    total = 0 
-    for key in freq_table:
-        count = freq_table[key]
-        total += count
-    
-    for key in freq_table:
-        freq_table[key] = (freq_table[key] / total) * 100
-    
-    return freq_table
-
-c_ratings_percentages = relative_freqs(content_ratings.copy())
-changed = False

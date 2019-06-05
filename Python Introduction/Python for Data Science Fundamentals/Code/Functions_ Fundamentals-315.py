@@ -64,7 +64,7 @@ squared_100 = square_2(100)
 add_30 = add_10(30)
 add_90 = add_10(90)
 
-## 4. Parameters and Arguments ##
+## 5. Parameters and Arguments ##
 
 a_list = [2, 1, 'data point', 'five', 89, 1, 'zero', True, 2.332]
 a_dictionary = {1: 'Name', 2: True, 3: [1,2,3], 4: 9.2221, 5: 5}
@@ -84,7 +84,7 @@ squared_11 = square(11)
 list_length = len_2(a_list)
 dictionary_length = len_2(a_dictionary)
 
-## 5. Creating Frequency Tables ##
+## 6. Extract Values From Any Column ##
 
 opened_file = open('AppleStore.csv')
 from csv import reader
@@ -113,7 +113,7 @@ ratings_ft = freq_table(ratings)
 genres = extract(11)
 genres_ft = freq_table(genres)
 
-## 6. Writing a Single Function ##
+## 8. Writing a Single Function ##
 
 def freq_table(num):
     freq_dict = {}
@@ -129,7 +129,7 @@ content_ratings_ft = freq_table(10)
 ratings_ft = freq_table(7)
 genres_ft = freq_table(11)
 
-## 7. Reusability and Multiple Parameters ##
+## 9. Reusability and Multiple Parameters ##
 
 def freq_table(index,apps_data):
     frequency_table = {}
@@ -147,7 +147,7 @@ content_ratings_ft = freq_table(10,apps_data)
 ratings_ft = freq_table(7,apps_data)
 genres_ft = freq_table(11,apps_data)
 
-## 8. Keyword and Positional Arguments ##
+## 10. Keyword and Positional Arguments ##
 
 def freq_table(data_set, index):
     frequency_table = {}
@@ -163,7 +163,7 @@ content_ratings_ft = freq_table(apps_data,10)
 ratings_ft = freq_table(index = 7, data_set = apps_data)
 genres_ft = freq_table(index = 11,data_set = apps_data)
 
-## 9. Combining Functions ##
+## 11. Combining Functions ##
 
 def extract(data_set, index):
     data_list = []
@@ -190,7 +190,7 @@ def mean(data_set, index):
 avg_price = mean(apps_data, 4)
 avg_rating = mean(apps_data, 7)
 
-## 10. Debugging Functions ##
+## 12. Debugging Functions ##
 
 def extract(data_set, index):
     column = []    

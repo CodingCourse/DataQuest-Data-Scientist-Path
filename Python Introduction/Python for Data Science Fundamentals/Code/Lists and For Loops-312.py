@@ -172,28 +172,3 @@ for i in apps_data[1:]:
     all_ratings.append(float(i[7]))
 
 avg_rating = sum(all_ratings) / len(all_ratings)
-
-## 12. Understanding How a CSV File Is Opened ##
-
-opened_file = open('AppleStore.csv')
-read_file = opened_file.read()
-split_dataset = read_file.split('\n')
-header = split_dataset[0]
-first_5 = split_dataset[1:6]
-print(header,first_5)
-
-## 13. More on Understanding How a CSV File Is Opened ##
-
-opened_file = open('AppleStore.csv')
-read_file = opened_file.read()
-split_dataset = read_file.split('\n')
-final_dataset = []
-for i in split_dataset:
-    j = i.split(',')
-    final_dataset.append(j)
-    
-print(final_dataset[:6])
-
-header = final_dataset[0]
-instagram = final_dataset[2]
-insta_rating = instagram[7]

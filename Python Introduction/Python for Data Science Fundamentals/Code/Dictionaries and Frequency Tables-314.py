@@ -1,4 +1,4 @@
-## 1. Creating a Dictionary ##
+## 1. Storing Data ##
 
 content_ratings = {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}
 over_4 = content_ratings['4+']
@@ -8,7 +8,7 @@ over_17 = content_ratings['17+']
 top_genres = {'Games':3862, 'Entertainment':535, 'Education':453, 'Photo & Video':349, 'Utilities':248}
 number_of_gaming_apps = top_genres['Games']
 
-## 2. Alternative Way of Creating a Dictionary ##
+## 4. Alternative Way of Creating a Dictionary ##
 
 content_ratings = {}
 content_ratings['4+'] = 4433
@@ -24,7 +24,7 @@ top_genres['Photo & Video'] = 349
 top_genres['Utilities'] = 248
 n_apps_education = top_genres['Education']
 
-## 4. Checking for Membership ##
+## 6. Checking for Membership ##
 
 content_ratings = {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}
 is_in_dictionary_1 = '4+' in content_ratings
@@ -35,7 +35,7 @@ if '17+' in content_ratings:
     result = "'17+' exists in content_ratings"
     print(result)
 
-## 5. Counting with Dictionaries ##
+## 7. Counting with Dictionaries ##
 
 from csv import reader
 
@@ -52,7 +52,7 @@ for apps in apps_data[1:]:
 
 print(content_ratings)
 
-## 6. Finding the Unique Values ##
+## 8. Finding the Unique Values ##
 
 from csv import reader
 
@@ -78,7 +78,7 @@ for apps in apps_data[1:]:
         
 most_common_genre = 'Games'
 
-## 8. Looping over Dictionaries ##
+## 10. Looping over Dictionaries ##
 
 content_ratings = {'4+': 4433, '12+': 1155, '9+': 987, '17+': 622}
 genre_counting = {'Social Networking': 167, 'Photo & Video': 349, 'Games': 3862, 'Music': 138, 'Reference': 64, 'Health & Fitness': 180, 'Weather': 72, 'Utilities': 248, 'Travel': 81, 'Shopping': 122, 'News': 75, 'Navigation': 46, 'Lifestyle': 144, 'Entertainment': 535, 'Food & Drink': 63, 'Sports': 114, 'Book': 112, 'Finance': 104, 'Education': 453, 'Productivity': 178, 'Business': 57, 'Catalogs': 10, 'Medical': 23}
@@ -99,7 +99,7 @@ for genre in genre_counting:
 percentage_games = genre_counting['Games']
 percentage_non_games = 100 - percentage_games
 
-## 9. Keeping the Dictionaries Separate ##
+## 11. Keeping the Dictionaries Separate ##
 
 content_ratings = {'4+': 4433, '12+': 1155, '9+': 987, '17+': 622}
 genre_counting = {'Social Networking': 167, 'Photo & Video': 349, 'Games': 3862, 'Music': 138, 'Reference': 64, 'Health & Fitness': 180, 'Weather': 72, 'Utilities': 248, 'Travel': 81, 'Shopping': 122, 'News': 75, 'Navigation': 46, 'Lifestyle': 144, 'Entertainment': 535, 'Food & Drink': 63, 'Sports': 114, 'Book': 112, 'Finance': 104, 'Education': 453, 'Productivity': 178, 'Business': 57, 'Catalogs': 10, 'Medical': 23}
@@ -118,7 +118,7 @@ for genre in genre_counting:
     genre_proportions[genre] = genre_counting[genre]/total_number_of_apps
     genre_percentages[genre] = genre_proportions[genre]*100
 
-## 10. Frequency Tables for Numerical Columns ##
+## 12. Frequency Tables for Numerical Columns ##
 
 data_sizes = []
 for apps in apps_data[1:]:
@@ -128,7 +128,7 @@ for apps in apps_data[1:]:
 min_size = min(data_sizes)
 max_size = max(data_sizes)
 
-## 11. Filtering for the Intervals ##
+## 13. Filtering for the Intervals ##
 
 rating_count = []
 for rating in apps_data[1:]:
